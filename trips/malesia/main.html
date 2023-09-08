@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
+
+  <!-- Tailwind css config  -->
+  <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class ="container mx-auto" x-data="{ open: false, idx: 0 }">
+  <div class="navbar bg-base-100 shadow-red-500 shadow rounded-lg">
+    <a class="btn btn-ghost normal-case text-xl" onclick="window.location.href='/index.html'">Home</a>
+  </div>
+  <div class="flex flex-col bg-[url('malesia_bkg.svg')] bg-no-repeat bg-cover">
+    <h1 class="font-bold mx-auto mt-4 h-16 text-5xl">Malesia</h1>
+    <h3 class="font-bold mb-4 mx-auto text-xl">12/8/23 - 27/8/23</h3>
+  </div>
+
+  <div class="mx-auto relative">
+    <img class ="absolute top-0" src="malesia_map.png" class="w-full h-screen" />
+    <button x-on:click="open =! open, idx=0" class="absolute rounded-lg bg-black top-60 w-10 left-52 text-white">D1</button>
+    <button x-on:click="open =! open, idx=1" class="absolute rounded-lg bg-green-500 w-10 top-36 left-64">D2</button>
+    <button x-on:click="open =! open, idx=2" class="absolute rounded-lg bg-green-500 w-10 top-36 left-40">D3</button>
+    <button x-on:click="open =! open, idx=3" class="absolute rounded-lg bg-green-500 w-10 top-20 left-32">D4</button>
+    <button x-on:click="open =! open, idx=4" class="absolute rounded-lg bg-green-500 w-10 top-28 right-36">D5</button>
+  </div>
+
+  <div x-data="{steps: [
+    {
+      'title': 'Day1',
+      'desc': 'Esplorazione di Kuala Lumpur, tra zanzare e caldo atomico!',
+      'imgs':['pics/casavo.png', 'pics/KL_skyline.jpg']
+    },
+    {
+      'title': 'Day2',
+      'desc': 'Salasdasdad',
+      'imgs':['path1' ,'path2']
+    }
+  ]}" class="block fixed top-0 left-0 z-10 w-full h-full overflow-auto bg-sky-500/75" x-show="open"
+    x-transition.duration.500ms>
+    <div class="flex justify-center mb-8">
+      <button :disabled = " idx == 0 " x-on:click=" idx -=1 "class="mr-8 rounded-lg bg-lime-500 w-16">Back</button>
+      <button :disabled = "idx == steps.length -1" x-on:click=" idx +=1 " class="rounded-lg bg-sky-500 w-16">Forward</button>
+    </div>
+    <div class="modal-content bg-slate-50 px-5 w-100 rounded-md border-black border-4">
+      <button type="button" class="close float-right" aria-label="Close" x-on:click="open = false">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <p x-text="steps[idx].title"></p>
+      <span x-text="steps[idx].desc"></span>
+      <!-- Carousel -->
+      <div class="carousel w-full rounded-box">
+        <template x-for="img in steps[idx].imgs">
+          <div class="carousel-item w-full">
+            <img :src="img" class="rounded-box" />
+          </div> 
+        </template>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
