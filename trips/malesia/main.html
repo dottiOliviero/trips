@@ -18,29 +18,59 @@
     <div class="flex justify-center">
         <a class="h-[10px] mr-4 hover:cursor-pointer" onclick="window.location.href='/index.html'">Home</a>
         <a class="h-[10px] mr-4 hover:cursor-pointer" onclick="window.location.href='/index.html'">Locations</a>
-        <a class="h-[10px] hover:cursor-pointer" onclick="mailto:test.com">Contacts</a>
+        <a class="h-[10px] hover:cursor-pointer" onclick="window.location='mailto:test.com'">Contacts</a>
     </div>
     <img src ="../../assets/earth.svg"/> 
   </div>
   <!-- fine header -->
-  <div class="flex flex-col bg-white h-[20%] shadow-md shadow-white/50">
-    <div class="flex justify-center mt-4 items-center">
+  <div class="flex flex-col bg-gradient-to-r from-cyan-500 to-blue-500 h-[20%] shadow-md shadow-white/50">
+    <div class="flex mx-auto mt-4 items-center">
       <h1 class="font-bold mr-2 text-5xl">Malesia</h1>
       <img src="malesia_flag_icon.svg" class="w-10">
     </div>
-    <h3 class="font-bold mx-auto text-l mb-4">12/8/23 - 27/8/23</h3>
+    <h3 class="font-light mx-auto text-l mb-4">12/8/23 - 27/8/23</h3>
   </div>
-  <div class="h-[400px] relative">
-    <img class ="absolute top-0" src="malesia_map.png" class="h-[70%]" />
-    <button x-on:click="open =! open, idx=0" class="absolute rounded-lg bg-black top-60 w-10 left-52 text-white">D1</button>
-    <button x-on:click="open =! open, idx=1" class="absolute rounded-lg bg-green-500 w-10 top-36 left-64">D2</button>
-    <button x-on:click="open =! open, idx=2" class="absolute rounded-lg bg-green-500 w-10 top-36 left-40">D3</button>
-    <button x-on:click="open =! open, idx=3" class="absolute rounded-lg bg-green-500 w-10 top-20 left-32">D4</button>
-    <button x-on:click="open =! open, idx=4" class="absolute rounded-lg bg-green-500 w-10 top-28 right-36">D5</button>
+  <!-- Big Title -->
+  <div class="place-items-center grid grid-cols-2 gap-4 bg-[url('itinerario-40.png')] bg-cover bg-center">
+    <div class="mt-2">
+      <img x-on:click="open =! open, idx=0" class="h-[10em] mask mask-squircle" src="pics/mp.JPG"/>
+    </div>
+    <div class="mt-2 flex flex-col">
+      <h2 class="font-bold">KL e tempi</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cupiditate asperiores nesciunt. ue placeat ipsam fugit?</p>
+    </div>
+    <div class="ml-2 flex flex-col">
+      <h2 class="font-bold">Taman Negara</h2>
+      <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cupiditate asperiores nesciunt. expedita labore enim cumque placeat ipsam fugit?</p>
+    </div>
+    <div class="">
+      <img x-on:click="open =! open, idx=1" class=" h-[10em] mask mask-squircle" src="pics/KL_skyline.JPG"/>
+    </div>
+    <div class="">
+      <img x-on:click="open =! open, idx=2" class=" h-[10em] mask mask-squircle" src="pics/mp.JPG"/>
+    </div>
+    <div class="flex flex-col">
+      <h2 class = "font-bold">Cameron Highlands e Ipoh</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cupiditate asperiores nesciunt. ipsam fugit?</p>
+    </div>
+    <div class="flex flex-col">
+      <h2 class="font-bold">George Town e i murales</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cupiditate asperiores nesciunt. ipsam fugit?</p>
+    </div>
+    <div class="">
+      <img x-on:click="open =! open, idx=3" class="h-[10em] mask mask-squircle" src="pics/KL_skyline.JPG"/>
+    </div>
+    <div class="mb-2">
+      <img x-on:click="open =! open, idx=4" class="h-[10em] mask mask-squircle" src="pics/mp.JPG"/>
+    </div>
+    <div class="flex flex-col mb-2">
+      <h2 class ="font-bold">Perhentians</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cupiditate asperiores nesciunt</p>
+    </div>
   </div>
   <footer class="footer footer-center p-4 bg-[#7AAAF2]">
     <aside>
-        <p class="text-white">Made with Love</p>
+        <p class="text-white">Made with <3 </p>
     </aside>
   </footer>
 
@@ -49,12 +79,10 @@
   <div x-data="{steps: [
     {
       'title': 'Kuala Lumpur - Day 1',
-      'desc': 'Esplorazione di Kuala Lumpur, tra zanzare e caldo atomico!',
       'imgs':['pics/mp.jpg', 'pics/KL_skyline.jpg']
     },
     {
       'title': 'Day2',
-      'desc': 'Salasdasdad',
       'imgs':['path1' ,'path2']
     }
   ]}" class="flex flex-col justify-center block fixed top-0 left-0 z-10 w-full h-full overflow-auto bg-sky-500/75" x-show="open"
@@ -70,7 +98,10 @@
         <p x-text="steps[idx].title" class="mx-auto font-bold"></p>
         <img src="../../assets/arrow-next.svg" :disabled = "idx == steps.length -1" x-on:click=" idx +=1 " class=" hover:cursor-pointer rounded-lg h-12"></img>
       </div>
-      <div x-text="steps[idx].desc" class="mb-2 items-center"></div>
+      <div class="flex mb-2 justify-center">
+        <p class="text-xs">scorri di lato per vedere le immagini
+        </p>
+      </div>
       <!-- Carousel -->
       <div class="carousel w-full rounded-box">
         <template x-for="img in steps[idx].imgs">
@@ -79,7 +110,7 @@
           </div> 
         </template>
       </div>
-      <div class="mb-2 text-xs">scorri di lato per vedere le immagini</div>
+
     </div>
   </div>
 </body>
