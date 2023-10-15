@@ -8,19 +8,19 @@
 
   <!-- Tailwind css config  -->
   <script src="https://cdn.tailwindcss.com/3.3.0"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="/dist/alpinejs.min.js"></script>
 </head>
 
 <body x-data="{ open: false, idx: 0 }">
   <!-- header -->
   <div class="flex justify-between h-[20px] w-full bg-white">
-    <img src ="../../assets/sailboat.svg"/>
+    <img src="../../assets/sailboat.svg" />
     <div class="flex justify-center">
-        <a class="h-[10px] mr-4 hover:cursor-pointer" onclick="window.location.href='/home.html'">Home</a>
-        <a class="h-[10px] mr-4 hover:cursor-pointer" onclick="window.location.href='/home.html'">Locations</a>
-        <a class="h-[10px] hover:cursor-pointer" onclick="window.location='mailto:test.com'">Contacts</a>
+      <a class="h-[10px] mr-4 hover:cursor-pointer" onclick="window.location.href='/home.html'">Home</a>
+      <a class="h-[10px] mr-4 hover:cursor-pointer" onclick="window.location.href='/home.html'">Locations</a>
+      <a class="h-[10px] hover:cursor-pointer" onclick="window.location='mailto:test.com'">Contacts</a>
     </div>
-    <img src ="../../assets/earth.svg"/> 
+    <img src="../../assets/earth.svg" />
   </div>
   <!-- fine header -->
   <div class="flex flex-col bg-gradient-to-r from-cyan-500 to-blue-500 h-[20%] shadow-md shadow-white/50">
@@ -32,71 +32,150 @@
   </div>
   <!-- Big Title -->
   <div class="place-items-center grid grid-cols-2 gap-4 bg-[url('itinerario-40.png')] bg-cover bg-center">
+    <!-- first -->
     <div class="mt-2">
-      <img x-on:click="open =! open, idx=0" class="h-[10em] mask mask-squircle" src="pics/mp.JPG"/>
+      <img @click="open =! open, idx=0" class="h-[300px] mask mask-squircle" src="pics/kl_skyline_v.jpeg" />
     </div>
     <div class="mt-2 flex flex-col">
-      <h2 class="font-bold">KL e tempi</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cupiditate asperiores nesciunt. ue placeat ipsam fugit?</p>
+      <h2 class="font-bold">KL e templi</h2>
+      <p>Si parte! L'emozione è tanta, come anche il Jungle IV in valigia. Dopo 16h di volo e non so quante
+        di assenza di sonno, arriviamo a KL (alle 7 di mattina ora locale) e dobbiamo subito esplorare!
+        Alle Batu Caves (sito religioso hindu più importante della Malesia) ci siamo concentrati sulle scimmie XD  
+      </p>
     </div>
+    <!-- end first -->
+    <!-- second -->
     <div class="ml-2 flex flex-col">
       <h2 class="font-bold">Taman Negara</h2>
-      <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cupiditate asperiores nesciunt. expedita labore enim cumque placeat ipsam fugit?</p>
+      <p class="">Dopo due giorni tra cemento e accaio, ci spostiamo verso la giungla! Armati di Jungle nulla ci spaventa!
+        A parte un fiume marrone e dei barchini poco stabili, con cui attraversiamo il fiume.
+        Facciamo un giro turistico di notte nella giungla. Il mattino dopo ci sveglia una scimmia vanitosa.
+        La camminata nella giungla miete le sue prime "vittime".
+      </p>
     </div>
     <div class="">
-      <img x-on:click="open =! open, idx=1" class=" h-[10em] mask mask-squircle" src="pics/KL_skyline.JPG"/>
+      <img @click="open =! open, idx=1" class=" h-[300px] mask mask-squircle" src="pics/taman_negara_main.jpeg" />
     </div>
-    <div class="">
-      <img x-on:click="open =! open, idx=2" class=" h-[10em] mask mask-squircle" src="pics/mp.JPG"/>
+    <!-- end second -->
+    <!-- third -->
+    <div class="mt-2">
+      <img @click="open =! open, idx=2" class=" h-[300px] mask mask-squircle" src="pics/cameron_highlands.jpeg" />
     </div>
-    <div class="flex flex-col">
-      <h2 class = "font-bold">Cameron Highlands e Ipoh</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cupiditate asperiores nesciunt. ipsam fugit?</p>
+    <div class="flex flex-col mt-2">
+      <h2 class="font-bold">Cameron Highlands e Ipoh</h2>
+      <p>Partiamo alla ricerca del fresco (umidità oltre 80% e 30 gradi costanti) verso le Cameron! 
+        Arrivati in casa parte la caccia alla blatta, con sofisticati sistemi di contrattacco... per lenire
+        lo stress giustamente maschera viso di gruppo con karaoke. Ah si, poi abbiamo visto anche le 
+        piantagioni di thè, la mossy forest e mangiato al night market.
+        Di Ipoh salviamo l'hotel e qualche murales.
+      </p>
     </div>
-    <div class="flex flex-col">
+    <!-- end third -->
+    <!-- forth -->
+    <div class="flex flex-col ml-2">
       <h2 class="font-bold">George Town e i murales</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cupiditate asperiores nesciunt. ipsam fugit?</p>
+      <p>Appena arrivati, alle 3 di pomeriggio, ci fiondiamo in un caffè francese a fare pranzo come si deve,
+        perchè va bene il riso, i noodles, il pollo, ma anche basta.
+        Sicuramente più famosa, la street art di George Town ci piace e ci costa anche mille mila foto.
+        Prima però visitiamo il tempio Kek lok si, il tempio buddista cinese più grande del sud-est asiatico.
+        Purtoppo niente scimmie, ma il tempio è un negozio unico, quindi tutto risolto. 
+      </p>
     </div>
     <div class="">
-      <img x-on:click="open =! open, idx=3" class="h-[10em] mask mask-squircle" src="pics/KL_skyline.JPG"/>
+      <img @click="open =! open, idx=3" class="h-[300px] mask mask-squircle" src="pics/george_town_tempio.jpeg" />
     </div>
-    <div class="mb-2">
-      <img x-on:click="open =! open, idx=4" class="h-[10em] mask mask-squircle" src="pics/mp.JPG"/>
+    <!-- end forth -->
+    <!-- fifth -->
+    <div class="ml-2">
+      <img @click="open =! open, idx=4" class="h-[300px] mask mask-squircle" src="pics/sand_bank_pops_v.jpeg" />
     </div>
-    <div class="flex flex-col mb-2">
-      <h2 class ="font-bold">Perhentians</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cupiditate asperiores nesciunt</p>
+    <div class="flex flex-col">
+      <h2 class="font-bold">Perhentians</h2>
+      <p>Finalmente la tappa che stavamo aspettando dal giorno 1: LE ISOLE. Mare spettacolare, acqua caldissima, pesci incredibili
+        vediamo degli squaletti, pesci pagliaccio e mille altri. Ogni giorni una escursione da paradiso, soprattutto quando andiamo
+        a sand bank: una lingua di terra in mezzo al mare, senza niente e nessuno. 
+        Siccome la camera fa pena, ci consoliamo con delle ottime grigliate di pesce. Ma dobbiamo 
+        proprio andare via di qui?
+      </p>
+    </div>
+    <!-- end fifth -->
+    <!-- sixth -->
+    <div class="flex flex-col ml-2">
+      <h2 class="font-bold">Kuala Lumpur & il ritorno</h2>
+      <p>Purtoppo tocca tornare a Kuala Lumpur perchè il giorno dopo ripartiamo per l'italia. L'ultima cena la facciamo
+        come si deve, in uno dei 10 ristoranti migliori di KL. 
+        Altro viaggio della speranza, perchè poi arrivati a Roma ci prendiamo pure il treno (alle 6 del mattino dopo) per 
+        tornare a casa. Il disagio è tanto e si vede!
+      </p>
+    </div>
+    <div class="">
+      <img @click="open =! open, idx=5" class="h-[300px] mask mask-squircle" src="pics/kl_finale.jpeg" />
+    </div>
+    <!-- end sixth -->
+
+    <div class="col-span-2 ml-2 mb-2">
+        Grazie Malesia per quello che ci hai regalato, per le persone che abbiamo incontrato.
+        Quante emozioni! Tanta attesa prima della partenza, i dubbi sui litri di jungle da portare,
+        la notte passata in aereoporto. Una meta che ci resterà nel cuore, e nello stomaco...
     </div>
   </div>
   <footer class="footer footer-center p-4 bg-[#7AAAF2]">
-    <aside>
-        <p class="text-white">Made with <3 </p>
+    <aside class="flex text-white">
+      <p>Made with </p>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+      </svg>
+      <p> and </p>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+        <path d="M15.75 8.25a.75.75 0 01.75.75c0 1.12-.492 2.126-1.27 2.812a.75.75 0 11-.992-1.124A2.243 2.243 0 0015 9a.75.75 0 01.75-.75z" />
+        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM4.575 15.6a8.25 8.25 0 009.348 4.425 1.966 1.966 0 00-1.84-1.275.983.983 0 01-.97-.822l-.073-.437c-.094-.565.25-1.11.8-1.267l.99-.282c.427-.123.783-.418.982-.816l.036-.073a1.453 1.453 0 012.328-.377L16.5 15h.628a2.25 2.25 0 011.983 1.186 8.25 8.25 0 00-6.345-12.4c.044.262.18.503.389.676l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.575 15.6z" clip-rule="evenodd" />
+      </svg>
+      
     </aside>
   </footer>
-
 
   <!-- dialog modal -->
   <div x-data="{steps: [
     {
-      'title': 'Kuala Lumpur - Day 1',
-      'imgs':['pics/mp.jpg', 'pics/KL_skyline.jpg']
+      'title': 'Kuala Lumpur - Day 1/2',
+      'imgs':['pics/kl_petronas.jpeg', 'pics/kl_con_pioggia.jpeg', 'pics/kl_piazza_centrale.jpeg', 'pics/kl_skyline_v.jpeg', 'pics/kl_petronas_notte.jpeg', 'pics/batu_caves.jpeg', 'pics/batu_caves_2.jpeg', 'pics/batu_caves_scimmia.jpeg' ]
     },
     {
-      'title': 'Day2',
-      'imgs':['path1' ,'path2']
+      'title': 'Taman Negara - Day 3/4',
+      'imgs':['pics/taman_negara_main.jpeg', 'pics/taman_negara.jpeg', 'pics/taman_fiume.jpeg', 'pics/taman_fiume_2.jpeg', 'pics/taman_canopy_walk.jpeg', 'pics/taman_scimmia.jpeg' ]
+    },
+    {
+      'title': 'Cameron Highlands & Ipoh - Day 5/7',
+      'imgs':['pics/cameron_highlands.jpeg', 'pics/cameron_sistemi_blatte.jpeg', 'pics/ipoh_murales.jpeg', 'pics/ipoh_tempio.jpeg', 'pics/mossy_forest.jpeg', 'pics/cameron_mask.jpeg' ]
+    },
+    {
+      'title': 'George Town - Day 8/9',
+      'imgs':['pics/george_town_kekloksi.jpeg', 'pics/george_town.jpeg', 'pics/george_town_tempio.jpeg', 'pics/george_town_tempio_2.jpeg', 'pics/george_town_gatto.jpeg', 'pics/bus.jpeg', 'pics/aereo.jpeg' ]
+    },
+    {
+      'title': 'Perhentians - Day 10/14',
+      'imgs':['pics/sand_bank.jpeg', 'pics/sand_bank_pops_v.jpeg', 'pics/sand_bank_top.jpeg', 'pics/perhentians.jpeg', 'pics/perhentians_2.jpeg', 'pics/perhentian_nemo.jpeg', 'pics/perhentians_cuore.jpeg', 'pics/tarta.jpeg' ]
+    },
+    {
+      'title': 'Kuala Lumpur il ritorno - Day 15',
+      'imgs':['pics/kl_finale.jpeg', 'pics/kl_ultima_notte.jpeg', 'pics/bagni_simpatici.jpeg', 'pics/disagio.jpeg' ]
     }
-  ]}" class="flex flex-col justify-center block fixed top-0 left-0 z-10 w-full h-full overflow-auto bg-sky-500/75" x-show="open"
-    x-transition.duration.500ms>
+  ]}" class="flex flex-col justify-center block fixed top-0 left-0 z-10 w-full h-full overflow-auto bg-sky-500/75"
+    x-show="open" x-transition.duration.500ms>
     <div class="modal-content bg-slate-50 px-5 w-100 rounded-md">
       <div class="flex mb-2 justify-end">
         <button type="button" class="close float-right" x-on:click="open = false">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class ="flex mb-2 items-center">
-        <img src="../../assets/arrow-next.svg" :disabled = " idx == 0 " x-on:click=" idx -=1 " class="scale-x-[-1] hover:cursor-pointer rounded-lg h-12"></img>
+      <div class="flex mb-2 items-center">
+        <img src="../../assets/arrow-next.svg" @click="if(idx!=0){idx -=1}"
+          class="scale-x-[-1] hover:cursor-pointer rounded-lg h-12"></img>
         <p x-text="steps[idx].title" class="mx-auto font-bold"></p>
-        <img src="../../assets/arrow-next.svg" :disabled = "idx == steps.length -1" x-on:click=" idx +=1 " class=" hover:cursor-pointer rounded-lg h-12"></img>
+        <img src="../../assets/arrow-next.svg" @click="if(idx != steps.length -1){idx +=1} "
+          class=" hover:cursor-pointer rounded-lg h-12"></img>
       </div>
       <div class="flex mb-2 justify-center">
         <p class="text-xs">scorri di lato per vedere le immagini
@@ -107,11 +186,12 @@
         <template x-for="img in steps[idx].imgs">
           <div class="carousel-item w-full">
             <img :src="img" class="rounded-box" />
-          </div> 
+          </div>
         </template>
       </div>
 
     </div>
   </div>
 </body>
+
 </html>
