@@ -9,3 +9,7 @@ svg path {
 svg path.active {
     fill: red;
 }
+
+svg path.home {
+    fill: gold
+}
