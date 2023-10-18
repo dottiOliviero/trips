@@ -6,19 +6,19 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
 
     <script src="https://cdn.tailwindcss.com/3.3.0"></script>
-    <script defer src="/dist/alpinejs.min.js"></script>
+    <script defer src="./dist/alpinejs.min.js"></script>
 </head>
 
 <body>
     <!-- header -->
     <div class="flex justify-between h-[20px] w-full bg-white">
-        <img src="../assets/sailboat.svg" />
+        <img src="./assets/sailboat.svg" />
         <div class="flex justify-center">
             <a class="h-[10px] mr-4 hover:cursor-pointer" onclick="">Home</a>
             <a class="h-[10px] mr-4 hover:cursor-pointer" onclick="">Locations</a>
             <a class="h-[10px] hover:cursor-pointer" onclick="window.location='mailto:test.com'">Contacts</a>
         </div>
-        <img src="../assets/earth.svg" />
+        <img src="./assets/earth.svg" />
     </div>
 
     <!-- header -->
@@ -1571,16 +1571,15 @@
             </circle>
         </svg>
     </div>
-    <div class="grid grid-cols-2 gap-4 bg-[url('../assets/sea_iso.svg')] h-[600px] bg-no-repeat bg-cover">
-        <div x-data="{ count: 0 }" class="mt-2 ml-2 justify-self-center card bg-base-100 h-[180px] hover:cursor-pointer" x-on:click="window.location.href='trips/malesia/main.html'">
-            <figure><img src="/assets/malesia_main.png" />
-            </figure>
+    <div class="grid grid-cols-2 gap-4 bg-[url('./assets/sea-iso.svg')] h-[600px] bg-no-repeat bg-cover">
+        <div class="mt-2 ml-2 justify-self-center card shadow-xl bg-base-100 h-[180px] hover:cursor-pointer" @click="window.location.href='trips/malesia/main'">
+            <figure><img src="./assets/malesia-main.png" /></figure>
             <div class="mt-1">
                 <h2 class="card-title justify-center">Malesia</h2>
             </div>
         </div>
         <div class="mt-2 mr-2 justify-self-center card h-[180px] bg-base-100 shadow-xl hover:cursor-pointer">
-            <figure><img src="/assets/croazia_main.png" /></figure>
+            <figure><img src="./assets/croazia-main.png" /></figure>
             <div class="mt-1">
                 <h2 class="card-title justify-center">Croazia</h2>
             </div>
