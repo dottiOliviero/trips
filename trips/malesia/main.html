@@ -8,7 +8,7 @@
 
   <!-- Tailwind css config  -->
   <script src="https://cdn.tailwindcss.com/3.3.0"></script>
-  <script defer src="/dist/alpinejs.min.js"></script>
+  <script defer src="../../dist/alpinejs.min.js"></script>
 </head>
 
 <body x-data="{ open: false, idx: 0 }">
@@ -34,7 +34,7 @@
   <div class="place-items-center grid grid-cols-2 gap-4 bg-[url('itinerario-40.png')] bg-cover bg-center">
     <!-- first -->
     <div class="mt-2">
-      <img @click="open =! open, idx=0" class="h-[300px] mask mask-squircle" src="pics/kl_skyline_v.jpeg" />
+      <img @click="open =! open, idx=0" class="h-[300px] mask mask-squircle" src="./pics/kl_skyline_v.jpeg" />
     </div>
     <div class="mt-2 flex flex-col">
       <h2 class="font-bold">KL e templi</h2>
@@ -54,12 +54,12 @@
       </p>
     </div>
     <div class="">
-      <img @click="open =! open, idx=1" class=" h-[300px] mask mask-squircle" src="pics/taman_negara_main.jpeg" />
+      <img @click="open =! open, idx=1" class=" h-[300px] mask mask-squircle" src="./pics/taman_negara_main.jpeg" />
     </div>
     <!-- end second -->
     <!-- third -->
     <div class="mt-2">
-      <img @click="open =! open, idx=2" class=" h-[300px] mask mask-squircle" src="pics/cameron_highlands.jpeg" />
+      <img @click="open =! open, idx=2" class=" h-[300px] mask mask-squircle" src="./pics/cameron_highlands.jpeg" />
     </div>
     <div class="flex flex-col mt-2">
       <h2 class="font-bold">Cameron Highlands e Ipoh</h2>
@@ -72,7 +72,7 @@
     </div>
     <!-- end third -->
     <!-- forth -->
-    <div class="flex flex-col ml-2">
+    <!-- <div class="flex flex-col ml-2">
       <h2 class="font-bold">George Town e i murales</h2>
       <p>Appena arrivati, alle 3 di pomeriggio, ci fiondiamo in un caffè francese a fare pranzo come si deve,
         perchè va bene il riso, i noodles, il pollo, ma anche basta.
@@ -82,12 +82,12 @@
       </p>
     </div>
     <div class="">
-      <img @click="open =! open, idx=3" class="h-[300px] mask mask-squircle" src="pics/george_town_tempio.jpeg" />
-    </div>
+      <img @click="open =! open, idx=3" class="h-[300px] mask mask-squircle" src="./pics/george_town_tempio.jpeg" />
+    </div> -->
     <!-- end forth -->
     <!-- fifth -->
-    <div class="ml-2">
-      <img @click="open =! open, idx=4" class="h-[300px] mask mask-squircle" src="pics/sand_bank_pops_v.jpeg" />
+    <!-- <div class="ml-2">
+      <img @click="open =! open, idx=4" class="h-[300px] mask mask-squircle" src="./pics/sand_bank_pops_v.jpeg" />
     </div>
     <div class="flex flex-col">
       <h2 class="font-bold">Perhentians</h2>
@@ -97,10 +97,10 @@
         Siccome la camera fa pena, ci consoliamo con delle ottime grigliate di pesce. Ma dobbiamo 
         proprio andare via di qui?
       </p>
-    </div>
+    </div> -->
     <!-- end fifth -->
     <!-- sixth -->
-    <div class="flex flex-col ml-2">
+    <!-- <div class="flex flex-col ml-2">
       <h2 class="font-bold">Kuala Lumpur & il ritorno</h2>
       <p>Purtoppo tocca tornare a Kuala Lumpur perchè il giorno dopo ripartiamo per l'italia. L'ultima cena la facciamo
         come si deve, in uno dei 10 ristoranti migliori di KL. 
@@ -109,15 +109,17 @@
       </p>
     </div>
     <div class="">
-      <img @click="open =! open, idx=5" class="h-[300px] mask mask-squircle" src="pics/kl_finale.jpeg" />
-    </div>
+      <img @click="open =! open, idx=5" class="h-[300px] mask mask-squircle" src="./pics/kl_finale.jpeg" />
+    </div> -->
     <!-- end sixth -->
-
     <div class="col-span-2 ml-2 mb-2">
+        ... TO BE CONTINUED ...
+    </div>
+    <!-- <div class="col-span-2 ml-2 mb-2">
         Grazie Malesia per quello che ci hai regalato, per le persone che abbiamo incontrato.
         Quante emozioni! Tanta attesa prima della partenza, i dubbi sui litri di jungle da portare,
         la notte passata in aereoporto. Una meta che ci resterà nel cuore, e nello stomaco...
-    </div>
+    </div> -->
   </div>
   <footer class="footer footer-center p-4 bg-[#7AAAF2]">
     <aside class="flex text-white">
@@ -128,7 +130,7 @@
           d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
       </svg>
       <p> and </p>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-4 h-4">
         <path d="M15.75 8.25a.75.75 0 01.75.75c0 1.12-.492 2.126-1.27 2.812a.75.75 0 11-.992-1.124A2.243 2.243 0 0015 9a.75.75 0 01.75-.75z" />
         <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM4.575 15.6a8.25 8.25 0 009.348 4.425 1.966 1.966 0 00-1.84-1.275.983.983 0 01-.97-.822l-.073-.437c-.094-.565.25-1.11.8-1.267l.99-.282c.427-.123.783-.418.982-.816l.036-.073a1.453 1.453 0 012.328-.377L16.5 15h.628a2.25 2.25 0 011.983 1.186 8.25 8.25 0 00-6.345-12.4c.044.262.18.503.389.676l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.575 15.6z" clip-rule="evenodd" />
       </svg>
@@ -140,27 +142,15 @@
   <div x-data="{steps: [
     {
       'title': 'Kuala Lumpur - Day 1/2',
-      'imgs':['pics/kl_petronas.jpeg', 'pics/kl_con_pioggia.jpeg', 'pics/kl_piazza_centrale.jpeg', 'pics/kl_skyline_v.jpeg', 'pics/kl_petronas_notte.jpeg', 'pics/batu_caves.jpeg', 'pics/batu_caves_2.jpeg', 'pics/batu_caves_scimmia.jpeg' ]
+      'imgs':['./pics/kl_petronas.jpeg', './pics/kl_con_pioggia.jpeg', './pics/kl_piazza_centrale.jpeg', './pics/kl_skyline_v.jpeg', './pics/kl_petronas_notte.jpeg', './pics/batu_caves.jpeg', './pics/batu_caves_2.jpeg', './pics/batu_caves_scimmia.jpeg' ]
     },
     {
       'title': 'Taman Negara - Day 3/4',
-      'imgs':['pics/taman_negara_main.jpeg', 'pics/taman_negara.jpeg', 'pics/taman_fiume.jpeg', 'pics/taman_fiume_2.jpeg', 'pics/taman_canopy_walk.jpeg', 'pics/taman_scimmia.jpeg' ]
+      'imgs':['./pics/taman_negara_main.jpeg', './pics/taman_negara.jpeg', './pics/taman_fiume.jpeg', './pics/taman_fiume_2.jpeg', './pics/taman_canopy_walk.jpeg', './pics/taman_scimmia.jpeg' ]
     },
     {
       'title': 'Cameron Highlands & Ipoh - Day 5/7',
-      'imgs':['pics/cameron_highlands.jpeg', 'pics/cameron_sistemi_blatte.jpeg', 'pics/ipoh_murales.jpeg', 'pics/ipoh_tempio.jpeg', 'pics/mossy_forest.jpeg', 'pics/cameron_mask.jpeg' ]
-    },
-    {
-      'title': 'George Town - Day 8/9',
-      'imgs':['pics/george_town_kekloksi.jpeg', 'pics/george_town.jpeg', 'pics/george_town_tempio.jpeg', 'pics/george_town_tempio_2.jpeg', 'pics/george_town_gatto.jpeg', 'pics/bus.jpeg', 'pics/aereo.jpeg' ]
-    },
-    {
-      'title': 'Perhentians - Day 10/14',
-      'imgs':['pics/sand_bank.jpeg', 'pics/sand_bank_pops_v.jpeg', 'pics/sand_bank_top.jpeg', 'pics/perhentians.jpeg', 'pics/perhentians_2.jpeg', 'pics/perhentian_nemo.jpeg', 'pics/perhentians_cuore.jpeg', 'pics/tarta.jpeg' ]
-    },
-    {
-      'title': 'Kuala Lumpur il ritorno - Day 15',
-      'imgs':['pics/kl_finale.jpeg', 'pics/kl_ultima_notte.jpeg', 'pics/bagni_simpatici.jpeg', 'pics/disagio.jpeg' ]
+      'imgs':['./pics/cameron_highlands.jpeg', './pics/cameron_sistemi_blatte.jpeg', './pics/ipoh_murales.jpeg', './pics/ipoh_tempio.jpeg', './pics/mossy_forest.jpeg', './pics/cameron_mask.jpeg' ]
     }
   ]}" class="flex flex-col justify-center block fixed top-0 left-0 z-10 w-full h-full overflow-auto bg-sky-500/75"
     x-show="open" x-transition.duration.500ms>
