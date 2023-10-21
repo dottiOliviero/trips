@@ -13,3 +13,7 @@ svg path.active {
 svg path.home {
     fill: gold
 }
+
+svg path.footer {
+    fill: white
+}
