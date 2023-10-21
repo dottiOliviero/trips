@@ -72,7 +72,7 @@
     </div>
     <!-- end third -->
     <!-- forth -->
-    <!-- <div class="flex flex-col ml-2">
+    <div class="flex flex-col ml-2">
       <h2 class="font-bold">George Town e i murales</h2>
       <p>Appena arrivati, alle 3 di pomeriggio, ci fiondiamo in un caffè francese a fare pranzo come si deve,
         perchè va bene il riso, i noodles, il pollo, ma anche basta.
@@ -83,10 +83,10 @@
     </div>
     <div class="">
       <img @click="open =! open, idx=3" class="h-[300px] mask mask-squircle" src="./pics/george_town_tempio.jpeg" />
-    </div> -->
+    </div>
     <!-- end forth -->
     <!-- fifth -->
-    <!-- <div class="ml-2">
+    <div class="ml-2">
       <img @click="open =! open, idx=4" class="h-[300px] mask mask-squircle" src="./pics/sand_bank_pops_v.jpeg" />
     </div>
     <div class="flex flex-col">
@@ -97,10 +97,10 @@
         Siccome la camera fa pena, ci consoliamo con delle ottime grigliate di pesce. Ma dobbiamo 
         proprio andare via di qui?
       </p>
-    </div> -->
+    </div>
     <!-- end fifth -->
     <!-- sixth -->
-    <!-- <div class="flex flex-col ml-2">
+    <div class="flex flex-col ml-2">
       <h2 class="font-bold">Kuala Lumpur & il ritorno</h2>
       <p>Purtoppo tocca tornare a Kuala Lumpur perchè il giorno dopo ripartiamo per l'italia. L'ultima cena la facciamo
         come si deve, in uno dei 10 ristoranti migliori di KL. 
@@ -110,16 +110,13 @@
     </div>
     <div class="">
       <img @click="open =! open, idx=5" class="h-[300px] mask mask-squircle" src="./pics/kl_finale.jpeg" />
-    </div> -->
+    </div>
     <!-- end sixth -->
     <div class="col-span-2 ml-2 mb-2">
-        ... TO BE CONTINUED ...
-    </div>
-    <!-- <div class="col-span-2 ml-2 mb-2">
         Grazie Malesia per quello che ci hai regalato, per le persone che abbiamo incontrato.
         Quante emozioni! Tanta attesa prima della partenza, i dubbi sui litri di jungle da portare,
         la notte passata in aereoporto. Una meta che ci resterà nel cuore, e nello stomaco...
-    </div> -->
+    </div>
   </div>
   <footer class="footer footer-center p-4 bg-[#7AAAF2]">
     <aside class="flex text-white">
@@ -151,6 +148,18 @@
     {
       'title': 'Cameron Highlands & Ipoh - Day 5/7',
       'imgs':['./pics/cameron_highlands.jpeg', './pics/cameron_sistemi_blatte.jpeg', './pics/ipoh_murales.jpeg', './pics/ipoh_tempio.jpeg', './pics/mossy_forest.jpeg', './pics/cameron_mask.jpeg' ]
+    },
+    {
+      'title': 'George Town - Day 8/9',
+      'imgs':['./pics/george_town_kekloksi.jpeg', './pics/george_town.jpeg', './pics/george_town_tempio.jpeg', './pics/george_town_tempio_2.jpeg', './pics/george_town_gatto.jpeg', './pics/bus.jpeg', './pics/aereo.jpeg' ]
+    },
+    {
+      'title': 'Perhentians - Day 10/14',
+      'imgs':['./pics/sand_bank.jpeg', './pics/sand_bank_pops_v.jpeg', './pics/sand_bank_top.jpeg', './pics/perhentians.jpeg', './pics/perhentians_2.jpeg', './pics/perhentian_nemo.jpeg', './pics/perhentians_cuore.jpeg', './pics/tarta.jpeg' ]
+    },
+    {
+      'title': 'Kuala Lumpur il ritorno - Day 15',
+      'imgs':['./pics/kl_finale.jpeg', './pics/kl_ultima_notte.jpeg', './pics/bagni_simpatici.jpeg', './pics/disagio.jpeg' ]
     }
   ]}" class="flex flex-col justify-center block fixed top-0 left-0 z-10 w-full h-full overflow-auto bg-sky-500/75"
     x-show="open" x-transition.duration.500ms>
