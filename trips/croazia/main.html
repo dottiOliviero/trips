@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
+
+  <!-- Tailwind css config  -->
+  <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+  <script defer src="../../dist/alpinejs.min.js"></script>
+</head>
+
+<body x-data="{ open: false, idx: 0 }">
+  <!-- header -->
+  <div class="flex justify-between h-[20px] w-full bg-white">
+    <img src="../../assets/sailboat.svg" />
+    <div class="flex justify-center">
+      <a class="h-[10px] mr-4 hover:cursor-pointer" onclick="window.location.href='/index'">Home</a>
+      <a class="h-[10px] mr-4 hover:cursor-pointer" onclick="window.location.href='/index'">Locations</a>
+      <a class="h-[10px] hover:cursor-pointer" onclick="window.location='mailto:test.com'">Contacts</a>
+    </div>
+    <img src="../../assets/earth.svg" />
+  </div>
+  <!-- fine header -->
+  <div class="flex flex-col bg-gradient-to-r from-cyan-500 to-blue-500 h-[20%] shadow-md shadow-white/50">
+    <div class="flex mx-auto mt-4 items-center">
+      <h1 class="font-bold mr-2 text-5xl">Croazia</h1>
+      <img src="./croatia.png" class="w-10">
+    </div>
+    <h3 class="font-light mx-auto text-l mb-4">6/08/22 - 13/08/22</h3>
+  </div>
+  <!-- Big Title -->
+  <div class="place-items-center grid grid-cols-2 gap-4 bg-[url('itinerario-40.png')] bg-cover bg-center">
+    <!-- partenza -->
+    <div class="ml-2 flex flex-col">
+      <h2 class="font-bold">Partenza - Molat</h2>
+      <p class="">Si parte! Uscire dal porto è la prima sfida e riusciamo a farlo senza distruggere niente!
+        A pranzo ci fermiamo nella baia di Uglian, si incomincia con le manovre, ma niente a che vedere con la sera.
+        Facciamo i turni di veglia perchè non sappiamo se l'ancora terrà... iniziamo rilassati la vacanza...
+      </p>
+    </div>
+    <div class="">
+      <img @click="open =! open, idx=0" class=" h-[300px] mask mask-squircle" src="./pics/molat-sera.jpeg" />
+    </div>
+    <!-- end partenza -->
+    <!-- skarda -->
+    <div class="mt-2">
+      <img @click="open =! open, idx=1" class=" h-[300px] mask mask-squircle" src="./pics/skarda-8-2.jpeg" />
+    </div>
+    <div class="flex flex-col mt-2">
+      <h2 class="font-bold">Skarda & Silba</h2>
+      <p>Dopo una notte tranquilla (meno male!) si riparte verso altri lidi, dove ci godiamo il mare in totale relax. Una baia Skarda ci ospita per il pranzo.
+        Per la notte andiamo a Silba, al gavitello, almeno si dorme un po', nonostante il temporale...
+      </p>
+    </div>
+    <!-- end skarda -->
+    <!-- premuda -->
+    <div class="flex flex-col ml-2">
+      <h2 class="font-bold">Premuda</h2>
+      <p> Cosa non abbiamo fatto... arriviamo ed è subito spettacolo con approccio al gavitello da manuale, nella sezione delle cose da non fare.
+        La cena è buona e ci divertiamo, con oreste che si ubriaca e decide di dare da mangiare ai pesci XD, tutto sommato una bella tappa!
+      </p>
+    </div>
+    <div class="">
+      <img @click="open =! open, idx=2" class="h-[300px] mask mask-squircle" src="./pics/premuda-top.jpeg" />
+    </div>
+    <!-- end premuda -->
+    <!-- sakarun -->
+    <div class="ml-2">
+      <img @click="open =! open, idx=3" class="h-[300px] mask mask-squircle" src="./pics/sakarun-sunset.jpeg" />
+    </div>
+    <div class="flex flex-col">
+      <h2 class="font-bold">Sakarun - il party</h2>
+      <p> Ripartiamo da Premuda belli freschi diretti verso Sakarun! A pranzo ci fermiamo in un'altra
+        baia di Skarda, ma ripartiamo subito per trovare posto nella baia di Sakarun, dove ci aspettano
+        i nostri amici di circus. La sera scendiamo a fare festa in un baretto sulla spiaggia e assistiamo 
+        al delirio che è circus...
+      </p>
+    </div>
+    <!-- end sakarun -->
+    <!-- Dugi -->
+    <div class="flex flex-col ml-2">
+      <h2 class="font-bold">Dugi Otok - Zverinac</h2>
+      <p> Prima tappa: relitto! Mettiamo ancora da soli! Davvero top! Poi si parte con l'esplorazione.
+        Per pranzo arriviamo in una baietta di Dugi Otok, dove ci sono dei buker per sottomarini, davvero inquietanti... 
+        infatti faccio schiantare il mio drone dentro... La sera andiamo a metterci al riparo a Zverinac,
+        anche qui le comiche per l'ancoraggio a terra! Ultima sera fuori purtoppo...
+      </p>
+    </div>
+    <div class="">
+      <img @click="open =! open, idx=4" class="h-[300px] mask mask-squircle" src="./pics/dugi-otok-bunker.jpeg" />
+    </div>
+    <!-- end Dugi -->
+    <!-- rientro -->
+    <div class="ml-2">
+      <img @click="open =! open, idx=5" class="h-[300px] mask mask-squircle" src="./pics/il-rientro.jpeg" />
+    </div>
+    <div class="flex flex-col">
+      <h2 class="font-bold">Il Rientro - Zara</h2>
+      <p> La giornata più densa di emozioni! Si parte con rotta marina di Sukosan, con qualche tappa in mezzo
+        per godersi gli ultimi tuffi. Piccolo problema, bisogna fare rifornimento. In un canale. Con mille altre barche. 
+        Con il vento. Con l'ansia a mille.... Ne siamo usciti indenni, non so ancora come ma ce l'abbiamo fatta!
+      </p>
+    </div>
+    <!-- end rientro -->
+    <div class="col-span-2 ml-2 mb-2">
+        Grazie Croazia per quello che ci hai regalato! E' stata una vacanza molto intensa, densa di emozioni, esperienze nuove e bei posti 
+        da vedere! Sicuramente torneremo, magari in barca, chissà...
+    </div>
+  </div>
+  <footer class="footer footer-center p-4 bg-[#7AAAF2]">
+    <aside class="flex text-white">
+      <p>Made with </p>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+      </svg>
+      <p> and </p>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-4 h-4">
+        <path d="M15.75 8.25a.75.75 0 01.75.75c0 1.12-.492 2.126-1.27 2.812a.75.75 0 11-.992-1.124A2.243 2.243 0 0015 9a.75.75 0 01.75-.75z" />
+        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM4.575 15.6a8.25 8.25 0 009.348 4.425 1.966 1.966 0 00-1.84-1.275.983.983 0 01-.97-.822l-.073-.437c-.094-.565.25-1.11.8-1.267l.99-.282c.427-.123.783-.418.982-.816l.036-.073a1.453 1.453 0 012.328-.377L16.5 15h.628a2.25 2.25 0 011.983 1.186 8.25 8.25 0 00-6.345-12.4c.044.262.18.503.389.676l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.575 15.6z" clip-rule="evenodd" />
+      </svg>
+      
+    </aside>
+  </footer>
+
+  <!-- dialog modal -->
+  <div x-data="{steps: [
+    {
+      'title': 'Partenza - Molat',
+      'imgs':['./pics/piloti.jpeg', './pics/piloti-allo-sbaraglio.jpeg', './pics/molat-sera.jpeg' ]
+    },
+    {
+      'title': 'Skarda',
+      'imgs':['./pics/skarda.jpeg', './pics/skarda-8.jpeg', './pics/skarda-8-2.jpeg' ]
+    },
+    {
+      'title': 'Premuda',
+      'imgs':['./pics/premuda-team.jpeg', './pics/premuda-top.jpeg', './pics/premuda-top-2.jpeg' ]
+    },
+    {
+      'title': 'Sakarun',
+      'imgs':[ './pics/skarda-10-2.jpeg', './pics/skarda-pranzo-10.jpeg', './pics/sakarun.jpeg', './pics/sakarun-kiss.jpeg', './pics/sakarun-sunset.jpeg', './pics/sakarun-2.jpeg']
+    },
+    {
+      'title': 'Dugi Otok - Zvenirac',
+      'imgs': [ './pics/relitto.jpeg', './pics/dugi-otok-2.jpeg', './pics/dugi-otok-bunker.jpeg', './pics/bunker.jpeg', './pics/zverinac-pacchetto.jpeg' ]
+    },
+    {
+      'title': 'Il Rientro',
+      'imgs': [ './pics/zverinac.jpeg', './pics/zverinac-top.jpeg', './pics/il-rientro.jpeg', './pics/zara-tramonto.jpeg', './pics/zara-luci.jpeg' ]
+    }
+  ]}" class="flex flex-col justify-center block fixed top-0 left-0 z-10 w-full h-full overflow-auto bg-sky-500/75"
+    x-show="open" x-transition.duration.500ms>
+    <div class="modal-content bg-slate-50 px-5 w-100 rounded-md">
+      <div class="flex mb-2 justify-end">
+        <button type="button" class="close float-right" x-on:click="open = false">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="flex mb-2 items-center">
+        <img src="../../assets/arrow-next.svg" @click="if(idx!=0){idx -=1}"
+          class="scale-x-[-1] hover:cursor-pointer rounded-lg h-12"></img>
+        <p x-text="steps[idx].title" class="mx-auto font-bold"></p>
+        <img src="../../assets/arrow-next.svg" @click="if(idx != steps.length -1){idx +=1} "
+          class=" hover:cursor-pointer rounded-lg h-12"></img>
+      </div>
+      <div class="flex mb-2 justify-center">
+        <p class="text-xs">scorri di lato per vedere le immagini
+        </p>
+      </div>
+      <!-- Carousel -->
+      <div class="carousel w-full rounded-box">
+        <template x-for="img in steps[idx].imgs">
+          <div class="carousel-item w-full">
+            <img :src="img" class="rounded-box" />
+          </div>
+        </template>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
